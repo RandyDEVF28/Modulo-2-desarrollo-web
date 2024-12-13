@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.ejemplo{
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+/*Ejemplo 1: Grid Basico*/
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.grid-container div {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/*Ejemplo 2: Grid con lineas*/
+.grid-areas{
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 10px;
+    min-height: 400px;
+}
+
+.grid-areas div{
+    background-color: #e74c3c;
+    color: white;
+    padding: 20px;
+}
+
+.header{
+    grid-column: 1 / -1;
+}
+
+.sidebar{
+    grid-row: 2 / 3;
+    grid-column: 1 / 2; 
+}
+
+.contenido{
+    grid-row: 2 / 3;
+    grid-column: 2 / -1;
+}
+
+.footer{
+    grid-column: 1 / -1;
+}
